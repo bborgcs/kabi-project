@@ -15,6 +15,14 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('sightings.index')" :active="request()->routeIs('sightings.*')">
+                        {{ __('Avistamento de Aves') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('deadbirds.index')" :active="request()->routeIs('deadbirds.*')">
+                        {{ __('Registro de Aves Mortas') }}
+                    </x-nav-link>
                 </div>
             </div>
 

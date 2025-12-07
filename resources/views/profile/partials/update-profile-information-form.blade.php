@@ -48,7 +48,8 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <button class="rounded-lg bg-lightOrange hover:bg-floralOrange text-white font-semibold py-2 px-4 rounded focus:ring-floralBrown"
+            >{{ __('Save') }}</button>
 
             @if (session('status') === 'profile-updated')
                 <p

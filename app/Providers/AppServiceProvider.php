@@ -21,4 +21,9 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
+
+    protected $policies = [
+        \App\Models\Sighting::class => \App\Policies\SightingPolicy::class,
+    ];
+
 }

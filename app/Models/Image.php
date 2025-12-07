@@ -9,7 +9,13 @@ class Image extends Model
 {
     use SoftDeletes;
 
-    public function sighting() {
-        return $this->belongTo(\App\Models\Sighting::class);
+    protected $fillable = [
+        'image_path',
+    ];
+
+    public function sighting()
+    {
+        return $this->hasOne(\App\Models\Sighting::class);
     }
+
 }

@@ -37,7 +37,16 @@
             <x-input-error :messages="$errors->get('password')" class="mt-2 text-[#C2410C]" />
         </div>
 
-        <div class="flex items-center justify-end mt-4">
+        <div class="flex items-center justify-between mt-4">
+        <a 
+            class="underline text-sm text-lightBlue hover:text-floralBlue rounded-md flex items-center gap-1" 
+            href="{{ route('register') }}"
+        >
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+
             @if (Route::has('password.request'))
                 <a 
                     class="underline text-sm text-lightBlue hover:text-floralBlue rounded-md" 
