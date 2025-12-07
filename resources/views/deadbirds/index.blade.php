@@ -12,6 +12,7 @@
     <table class="table align-middle caption-top table-striped">
         <thead>
             <th class="text-secondary">USUÁRIO</th>
+            <TH class="text-secondary">AVE</TH>
             <th class="text-secondary">NOME</th>
             <th class="d-none d-md-table-cell text-secondary">ESPÉCIE</th>
             <th class="d-none d-md-table-cell text-secondary">GÊNERO</th>
@@ -25,6 +26,15 @@
                     {{-- USUÁRIO --}}
                     <td>
                         {{ $bird->user->name ?? 'Usuário não informado' }}
+                    </td>
+
+                    {{-- AVE --}}
+                    <td>
+                        <img src="{{ asset('storage/'.$bird->image
+                        
+                        ->image_path) }}"
+                            alt="foto"
+                            style="width: 60px; height: 60px; object-fit: cover; border-radius: 6px;">
                     </td>
 
                     {{-- NOME (pré-select: species) --}}
